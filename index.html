@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ-0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class = "screen active" id = "start-screen"> 
+            <h1>EKRP QUIZ-0!</h1>
+            <p>Let's see if you really know your stuff</p>
+            <button id = "start-btn">Start Quiz</button>
+            <button id="add-question-btn">Add Question</button>
+            <button id="view-questions-btn">View Questions</button>
+        </div>
+
+        <div class = "screen" id="quiz-screen">
+            <div class="header">
+                <h2 id="question-text">Question goes here</h2>
+                <div class="quiz-info">
+                    <p>
+                        Question <span id="current-question">
+                            1
+                        </span> of <span id="total-questions">5</span>
+                        
+                    </p>
+
+                    <p>
+                        Score: <span id="score">0</span>
+                    </p>
+                </div>
+            </div>
+            <div id="answers-container" class="answers-container">
+
+            </div>
+             <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+             </div>
+
+        </div>
+
+        <div id="result-screen" class="screen">
+            <h1>Quiz Results</h1>
+            <div class=" result-info">
+                <p>You scored <span id="final-score">0</span> out of <span id="max-score">5</span> </p>
+
+                <div id="result-message">Good job!</div>
+            </div>
+            <button id="restart-btn">Restart Quiz</button>
+            <button id="back-to-start-btn">Back to Start</button>
+        </div>
+        
+        <!-- Add Question Screen -->
+        <div id="add-question-screen" class="screen">
+            <h1>Add a New Question</h1>
+            <form id="add-question-form">
+                <label for="new-question">Question:</label>
+                <input type="text" id="new-question" required><br><br>
+
+                <label>Answers:</label><br>
+                <h2>Provide 4 answers and select the correct one's radio button</h2>
+                <input type="text" class="answer-input" placeholder="Answer 1" required>
+                <input type="radio" name="correct-answer" value="0" required> Correct<br>
+
+                <input type="text" class="answer-input" placeholder="Answer 2" required>
+                <input type="radio" name="correct-answer" value="1"> Correct<br>
+
+                <input type="text" class="answer-input" placeholder="Answer 3" required>
+                <input type="radio" name="correct-answer" value="2"> Correct<br>
+
+                <input type="text" class="answer-input" placeholder="Answer 4" required>
+                <input type="radio" name="correct-answer" value="3"> Correct<br><br>
+
+                <button type="submit">Save Question</button>
+                <button type="button" id="cancel-add-question">Cancel</button>
+            </form>
+        </div>
+
+        <!-- View Questions Screen -->
+        <div id="view-questions-screen" class="screen">
+            <h1>All Questions</h1>
+            <div id="questions-list">
+                <!-- Questions will be displayed here -->
+            </div>
+            <button id="back-from-view-btn">Back to Start</button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
